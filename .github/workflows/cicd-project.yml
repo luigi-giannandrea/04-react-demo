@@ -1,18 +1,20 @@
 name: CI / CD for Project
 on: push
 jobs:
-  lint:
+  preparing:
     runs-on: ubuntu-latest
     steps:
-      - name: Run Linter
+      - name: Get Code
+        uses: action/checkout@v4
+      - name: Install Node 18
+        uses: actions/setup-node@v4
+        with:
+          node-version: 18
+      - name: Install dependencies
+        run: npm ci
+      - name: Run linter
         run: npm run lint
-  tests:
-    runs-on: ubuntu-latest
-    steps:
-      - name: Testing the App
+      - name: Run Tests
         run: npm run test
-  build:
-    runs-on: ubuntu-latest
-    steps:
-      - name: Building the Application
-        run: npm run build 
+      - name: Building App
+        run: npm run build
