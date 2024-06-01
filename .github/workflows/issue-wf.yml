@@ -1,4 +1,4 @@
-name: Managing Issues
+name: Issues - Create Only
 on:
   issues:
     types: opened

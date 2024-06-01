@@ -1,4 +1,4 @@
-name: Managing Issues
+name: Issues All Actions
 on: issues
  
 jobs:
