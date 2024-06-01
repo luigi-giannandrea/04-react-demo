@@ -1,7 +1,5 @@
 name: Managing Issues
-on:
-  issues:
-    types: opened
+on: issues
  
 jobs:
   preparing:
