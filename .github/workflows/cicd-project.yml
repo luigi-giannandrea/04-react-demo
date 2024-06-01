@@ -18,3 +18,5 @@ jobs:
         run: npm run test
       - name: Building App
         run: npm run build
+      - name: Deploy Code
+        run: echo "Deployed"
