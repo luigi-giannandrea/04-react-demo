@@ -5,14 +5,14 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Run Linter
-        run: npm lint
+        run: npm run lint
   tests:
     runs-on: ubuntu-latest
     steps:
       - name: Testing the App
-        run: npm test
+        run: npm run test
   build:
     runs-on: ubuntu-latest
     steps:
       - name: Building the Application
-        run: npm test 
+        run: npm run build 
