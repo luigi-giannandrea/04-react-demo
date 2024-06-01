@@ -5,7 +5,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Get Code
-        uses: action/checkout@v4
+        uses: actions/checkout@v4
       - name: Install Node 18
         uses: actions/setup-node@v4
         with:
