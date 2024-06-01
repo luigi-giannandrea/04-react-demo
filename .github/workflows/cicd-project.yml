@@ -1,0 +1,18 @@
+name: CI / CD for Project
+on: push
+jobs:
+  lint:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Run Linter
+        run: npm lint
+  tests:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Testing the App
+        run: npm test
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Building the Application
+        run: npm test 
