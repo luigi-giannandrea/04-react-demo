@@ -1,0 +1,12 @@
+name: Managing Issues
+on:
+  issues:
+    types: opened
+ 
+jobs:
+  preparing:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Get Context Github
+        run: echo ${{ toJson(github) }}
+
